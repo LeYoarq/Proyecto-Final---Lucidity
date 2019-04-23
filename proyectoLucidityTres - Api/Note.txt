@@ -1,0 +1,34 @@
+Hasta ahora.
+
+Usuario con su navegador ->
+-> petición http a endpoint (por ejemplo) 
+-> / GET (poniendo por ejemplo google.com) (GET método por defecto)
+-> motor de enrutado: (las rutas de node.js) metodo.ruta(controlador)
+-> controlador -> modelo -> acción en la base de datos -> controlador
+-> vista
+
+Con estructura de API.
+Usuario con su navegador ->
+-> petición http a endpoint (por ejemplo) 
+-> / GET (poniendo por ejemplo google.com) (GET método por defecto)
+-> motor de enrutado: (las rutas de node.js) metodo.ruta(controlador)
+-> controlador -> modelo -> acción en la base de datos -> controlador
+-> devolver datos (en general en formato JSON)
+
+API Restful
+-modelos 2: usuario, test.
+-métodos: get, post, put (o patch), delete. (vamos a usar put en vez de patch, para actualizar un registro).
+-No utilizar verbos en las rutas, solo los sustantivos que referencian a nuestros modelos. 
+Los verbos vienen dados por las acciones que denotan los métodos HTTP
+
+Estos endpoint requieren autenticación.
+GET /api/usuarios/5 -> me muestra el perfil del usuario 5. 
+PUT /api/usuarios/5 -> actualizar el perfil del usuario. se le pasa "Payload".
+DELETE /api/usuarios/5 -> borra el usuario 5.
+POST /api/usuarios/5 -> crear un nuevo usuario. se le pasa "payload". -> devuelve código 201 (recurso creado) y devuelve el objeto recién creado.
+GET /api/usuarios/5/tests -> muestra el formulario del test para el usuario con id 5 (que es el que está logueado)
+POST /api/usuarios/5/tests -> inserta la fila del test contestado por el usuario 5.
+DELETE /api/usuarios/5/tests/234 -> el administrador puede borrar el test 234
+GET /api/usuarios/5/tests/234 -> el usuario 5 puede coger los datos del test 234
+
+petición get / dominio: google.com -> ? -> una base de dato tiene almacenado un html

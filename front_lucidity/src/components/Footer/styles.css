@@ -1,0 +1,36 @@
+/* .footer {
+    color: rgb(255, 255, 255);
+    font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+    background: black;
+    bottom: 0;
+    left: 0;
+    vertical-align: baseline;
+    padding: 20px 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+  } */
+/* 
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+  } */
+  .footer {
+  color: #b6b392e7;
+  font-size: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+  vertical-align: baseline;
+  background: black;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  margin: 0px;
+  outline: 0px;
+  padding: 0px;
+  
+  }

@@ -1,0 +1,189 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+*::after,
+*::befor {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  padding: 20px;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row [class^='col-'] {
+  float: left;
+}
+.row [class^='col-']:not(:last-child) {
+  margin-right: 5rem;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 5rem)/2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 5rem)/3);
+}
+.row .col-2-of-3 {
+  width: calc(((100% - 2 * 5rem)/3) * 2 + 5rem );
+}
+.row .col-1-of-4 {
+  width: calc(((100% - 3 * 5rem)/4));
+}
+
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 55rem;
+  cursor: pointer;
+  border: 0px !important;
+}
+.card__side {
+  position: absolute;
+  font-size: 2rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  backface-visibility: hidden;
+  transition: all .8s ease;
+}
+.card__side--front {
+  background-color: #fff;
+}
+.card__side--back {
+  transform: rotateY(180deg);
+}
+.card__side--back-1 {
+  background-image: linear-gradient(to right bottom, #559cc2, #0a5881);
+}
+.card__side--back-2 {
+  background-image: linear-gradient(to right bottom,  #f7e73c, #e2ae20);
+}
+.card__side--back-3 {
+  background-image: linear-gradient(to right bottom, #559cc2, #0a5881);
+}
+.card__side--back-4 {
+  background-image: linear-gradient(to right bottom, #f7e73c, #e2ae20);
+}
+/* .card__side--back- {
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+} */
+.card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0);
+}
+.card__picture {
+  background-size: cover;
+  height: 23rem;
+  background-blend-mode: soft-light;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.card__picture--1 {
+  background-image: linear-gradient(to right bottom,#559cc2, #134e6e), url(http://bit.ly/2TqN8Y8);
+}
+.card__picture--2 {
+  background-image: linear-gradient(to right bottom, #f7e73c, #cc7c13), url(http://bit.ly/2H5yFKZ);
+}
+.card__picture--3 {
+  background-image: linear-gradient(to right bottom,#559cc2, #218ec9), url(http://bit.ly/2UfiH3J);
+}
+.card__picture--4{
+  background-image: linear-gradient(to right bottom, #f7e73c, #e2bf20), url(http://bit.ly/2UfiH3J);
+}
+.card__headding {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  width: 75%;
+}
+.card__headding-span {
+  padding: .1rem 1.5rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.card__headding-span--1 {
+  background-image: linear-gradient(to right bottom, #559cc2de, #1f80b4e0);
+}
+.card__headding-span--2 {
+  background-image: linear-gradient(to right bottom, #f7e83ce0, #c09917e3);
+  color: black;
+}
+
+.card__headding-span--3 {
+  background-image: linear-gradient(to right bottom, #559cc2de, #218ec9e0);
+}
+.card__headding-span--4 {
+  background-image: linear-gradient(to right bottom, #f7e83ce0, #e2be20e3);
+  color: black;
+}
+.card__details {
+  padding: 3rem;
+}
+.card__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+.card__details ul li {
+  color: #777;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card__price-box {
+  text-align: center;
+  color: #fff;
+}
+.card__price-only {
+  font-size: 1.5rem;
+  color: black;
+}
+.card__price-value {
+  font-size: 3.5rem !important;
+  text-transform: uppercase;
+  font-weight: 100;
+  color: black;
+}
+.card__price-value1 {
+  font-size: 4rem !important;
+  text-transform: uppercase;
+  font-weight: 100;
+}
